@@ -7,3 +7,5 @@ __pycache__/
 *.log
 .venv*/
 Task_4_Notebook.html
+
+task4_runtime/
