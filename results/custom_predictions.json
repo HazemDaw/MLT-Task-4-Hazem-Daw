@@ -1,0 +1,14 @@
+{
+  "model": "resnet18",
+  "predictions": [
+    {
+      "image": "dog.jpg",
+      "predicted_class": "dogs",
+      "confidence": 0.8840392827987671,
+      "probabilities": {
+        "cats": 0.11596071720123291,
+        "dogs": 0.8840392827987671
+      }
+    }
+  ]
+}

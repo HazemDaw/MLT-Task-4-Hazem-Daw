@@ -1,0 +1,32 @@
+{
+  "name": "resnet18",
+  "run_name": "resnet18",
+  "epochs": 15,
+  "seed": 42,
+  "image_size": 224,
+  "batch_size": 64,
+  "class_to_idx": {
+    "cats": 0,
+    "dogs": 1
+  },
+  "pretrained": true,
+  "train_images": 19995,
+  "validation_images": 2490,
+  "excluded_training_duplicates": [
+    "train/cats/cat.2339.jpg",
+    "train/cats/cat.3345.jpg",
+    "train/cats/cat.6204.jpg",
+    "train/dogs/dog.2877.jpg",
+    "train/dogs/dog.3082.jpg"
+  ],
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "torch": "2.11.0+cu128",
+  "selection": "minimum validation BCE, threshold fixed at 0.5",
+  "parameters": 11308097,
+  "trainable_parameters": 131585,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "augmentation": "none",
+  "training_seconds": 6.359978699998464
+}

@@ -1,0 +1,32 @@
+{
+  "name": "cnn",
+  "run_name": "cnn",
+  "epochs": 15,
+  "seed": 42,
+  "image_size": 150,
+  "batch_size": 128,
+  "class_to_idx": {
+    "cats": 0,
+    "dogs": 1
+  },
+  "pretrained": false,
+  "train_images": 19995,
+  "validation_images": 2490,
+  "excluded_training_duplicates": [
+    "train/cats/cat.2339.jpg",
+    "train/cats/cat.3345.jpg",
+    "train/cats/cat.6204.jpg",
+    "train/dogs/dog.2877.jpg",
+    "train/dogs/dog.3082.jpg"
+  ],
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "torch": "2.11.0+cu128",
+  "selection": "minimum validation BCE, threshold fixed at 0.5",
+  "parameters": 1350817,
+  "trainable_parameters": 1350817,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "augmentation": "none",
+  "training_seconds": 249.16800040000817
+}

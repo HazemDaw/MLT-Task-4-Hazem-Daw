@@ -1,0 +1,22 @@
+{
+  "cnn.pt": {
+    "sha256": "aa78d7f5037a8b23b6e66a64651fea84028861fde5e2e799772cd429470ba5df",
+    "bytes": 5407877,
+    "url": "https://github.com/HazemDaw/MLT-Task-4-Hazem-Daw/releases/download/v1.0/cnn.pt"
+  },
+  "resnet18.pt": {
+    "sha256": "b17ff958ccf4ff9db435bee86e4c4d3b234d23b2cf300eb41572aeaf7cdf6ca8",
+    "bytes": 45314249,
+    "url": "https://github.com/HazemDaw/MLT-Task-4-Hazem-Daw/releases/download/v1.0/resnet18.pt"
+  },
+  "scratch.pt": {
+    "sha256": "d39fc83699ca5cf23a32cc9c39f7f6a31ea23c37d200fc1f28c78cc6c58d79c0",
+    "bytes": 10862845,
+    "url": "https://github.com/HazemDaw/MLT-Task-4-Hazem-Daw/releases/download/v1.0/scratch.pt"
+  },
+  "vgg16.pt": {
+    "sha256": "250f190874d36a2224d16b73e2ab8af212a842c432bea3e45e3c62b70309d3f4",
+    "bytes": 84561345,
+    "url": "https://github.com/HazemDaw/MLT-Task-4-Hazem-Daw/releases/download/v1.0/vgg16.pt"
+  }
+}

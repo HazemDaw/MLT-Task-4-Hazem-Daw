@@ -1,0 +1,53 @@
+{
+  "model": "cnn",
+  "pretrained": false,
+  "best_epoch": 9,
+  "validation_loss": 0.3951554298400879,
+  "test_loss": 0.38424208760261536,
+  "accuracy": 0.8216,
+  "balanced_accuracy": 0.8216,
+  "f1_dog": 0.8214571657325861,
+  "roc_auc": 0.9077343999999999,
+  "correct": 2054,
+  "test_images": 2500,
+  "ci95_low": 0.8061025853611796,
+  "ci95_high": 0.8361106004358818,
+  "tta": false,
+  "classification_report": {
+    "cats": {
+      "precision": 0.8210862619808307,
+      "recall": 0.8224,
+      "f1-score": 0.8217426059152678,
+      "support": 1250.0
+    },
+    "dogs": {
+      "precision": 0.8221153846153846,
+      "recall": 0.8208,
+      "f1-score": 0.8214571657325861,
+      "support": 1250.0
+    },
+    "accuracy": 0.8216,
+    "macro avg": {
+      "precision": 0.8216008232981076,
+      "recall": 0.8216,
+      "f1-score": 0.821599885823927,
+      "support": 2500.0
+    },
+    "weighted avg": {
+      "precision": 0.8216008232981076,
+      "recall": 0.8216,
+      "f1-score": 0.8215998858239268,
+      "support": 2500.0
+    },
+    "confusion_matrix": [
+      [
+        1028,
+        222
+      ],
+      [
+        224,
+        1026
+      ]
+    ]
+  }
+}

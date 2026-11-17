@@ -1,0 +1,40 @@
+{
+  "best_inference_model": "resnet18",
+  "selection_rule": "lowest validation BCE before test access",
+  "models": {
+    "cnn": {
+      "name": "cnn",
+      "best_epoch": 9,
+      "validation_loss": 0.3951554298400879,
+      "validation_accuracy": 0.827309250831604,
+      "checkpoint_sha256": "aa78d7f5037a8b23b6e66a64651fea84028861fde5e2e799772cd429470ba5df",
+      "tta": false
+    },
+    "resnet18": {
+      "name": "resnet18",
+      "best_epoch": 11,
+      "validation_loss": 0.033688902854919434,
+      "validation_accuracy": 0.9875501990318298,
+      "checkpoint_sha256": "b17ff958ccf4ff9db435bee86e4c4d3b234d23b2cf300eb41572aeaf7cdf6ca8",
+      "tta": false
+    },
+    "scratch": {
+      "name": "scratch",
+      "best_epoch": 51,
+      "validation_loss": 0.10271522402763367,
+      "validation_accuracy": 0.9698795080184937,
+      "checkpoint_sha256": "d39fc83699ca5cf23a32cc9c39f7f6a31ea23c37d200fc1f28c78cc6c58d79c0",
+      "tta": true,
+      "validation_plain_loss": 0.11219209432601929,
+      "validation_tta_loss": 0.10271522402763367
+    },
+    "vgg16": {
+      "name": "vgg16",
+      "best_epoch": 1,
+      "validation_loss": 0.041229430586099625,
+      "validation_accuracy": 0.9871485829353333,
+      "checkpoint_sha256": "250f190874d36a2224d16b73e2ab8af212a842c432bea3e45e3c62b70309d3f4",
+      "tta": false
+    }
+  }
+}

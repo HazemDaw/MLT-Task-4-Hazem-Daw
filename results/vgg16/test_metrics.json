@@ -1,0 +1,53 @@
+{
+  "model": "vgg16",
+  "pretrained": true,
+  "best_epoch": 1,
+  "validation_loss": 0.041229430586099625,
+  "test_loss": 0.04808448255062103,
+  "accuracy": 0.9832,
+  "balanced_accuracy": 0.9832,
+  "f1_dog": 0.9830781627719581,
+  "roc_auc": 0.9984192000000001,
+  "correct": 2458,
+  "test_images": 2500,
+  "ci95_low": 0.9773702869853322,
+  "ci95_high": 0.987547036948561,
+  "tta": false,
+  "classification_report": {
+    "cats": {
+      "precision": 0.9763406940063092,
+      "recall": 0.9904,
+      "f1-score": 0.9833200953137411,
+      "support": 1250.0
+    },
+    "dogs": {
+      "precision": 0.9902597402597403,
+      "recall": 0.976,
+      "f1-score": 0.9830781627719581,
+      "support": 1250.0
+    },
+    "accuracy": 0.9832,
+    "macro avg": {
+      "precision": 0.9833002171330247,
+      "recall": 0.9832,
+      "f1-score": 0.9831991290428497,
+      "support": 2500.0
+    },
+    "weighted avg": {
+      "precision": 0.9833002171330248,
+      "recall": 0.9832,
+      "f1-score": 0.9831991290428498,
+      "support": 2500.0
+    },
+    "confusion_matrix": [
+      [
+        1238,
+        12
+      ],
+      [
+        30,
+        1220
+      ]
+    ]
+  }
+}
