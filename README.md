@@ -28,9 +28,9 @@ All models use the same 2,500-image test split. Checkpoints and inference settin
 | Three-layer CNN | None | 2,054 | 82.16% | 0.3842 |
 | VGG16 transfer | ImageNet | 2,458 | 98.32% | 0.0481 |
 | ResNet18 transfer | ImageNet | 2,464 | 98.56% | 0.0433 |
-| Residual CNN | None | 2,408 | 96.32% | 0.1137 |
+| Residual CNN | None | 2,423 | 96.92% | 0.1064 |
 
-ResNet18 is selected for custom-image inference by validation BCE. The residual CNN is the optional contest entry; its result uses validation-selected horizontal-flip logit averaging. The pretrained models are excluded from the contest.
+ResNet18 is selected for custom-image inference by validation BCE. The residual CNN is the optional contest entry; its result uses validation-selected logit averaging over 128- and 160-pixel inputs and their horizontal flips. The pretrained models are excluded from the contest. This follow-up inference setting improves the initial scratch-model test accuracy from 96.32% to 96.92% without changing its weights. The initial test records and the validation comparison are retained in `results/scratch/`.
 
 ## Running
 

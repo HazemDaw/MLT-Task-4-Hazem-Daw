@@ -5,9 +5,10 @@
     "vgg16: full-experiment metrics still match 2,500 per-image predictions",
     "resnet18: full-experiment metrics still match 2,500 per-image predictions",
     "scratch: full-experiment metrics still match 2,500 per-image predictions",
-    "Six genuine full-experiment plots and three embedded photo panels preserved unchanged",
-    "Notebook code is self-contained and proceeds from data preparation through training and inference",
-    "All notebook cells run in sequence in the standard Jupyter kernel on the validation subset"
+    "Four training-history plots and three photo panels preserved; test-comparison plots refreshed from actual metrics",
+    "Notebook code is self-contained and includes validation-selected multiscale inference",
+    "All notebook cells run in sequence in the standard Jupyter kernel on the validation subset",
+    "Submitted notebook multiscale inference reproduces 2,423 correct test predictions and the selected validation BCE"
   ],
   "validation_scope": {
     "training_images": 16,
@@ -35,6 +36,12 @@
   "embedded_photo_panels": 3,
   "standard_ipykernel_execution": true,
   "verification_pyzmq": "27.3.0",
-  "notebook_bytes": 1609227,
-  "notebook_sha256": "c9e5974c5d49ef895bfc5f464056e0893c5b3885ee0fdf2f4cfc225381260bab"
+  "notebook_bytes": 1613203,
+  "notebook_sha256": "844930b0e5bf95443ba46b1131232640f3764a3afd5bf2d57f20c791511da0d4",
+  "contest_inference_sizes": [
+    128,
+    160
+  ],
+  "contest_test_correct": 2423,
+  "contest_test_accuracy": 0.9692
 }

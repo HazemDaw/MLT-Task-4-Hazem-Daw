@@ -1,0 +1,64 @@
+{
+  "selection_rule": "minimum validation BCE",
+  "selected": "128_160_flip",
+  "candidates": [
+    {
+      "candidate": "128_plain",
+      "sizes": [
+        128
+      ],
+      "horizontal_flip": false,
+      "validation_bce": 0.11219209432601929,
+      "validation_accuracy": 0.9634538292884827
+    },
+    {
+      "candidate": "128_flip",
+      "sizes": [
+        128
+      ],
+      "horizontal_flip": true,
+      "validation_bce": 0.10271517187356949,
+      "validation_accuracy": 0.9698795180722891
+    },
+    {
+      "candidate": "160_flip",
+      "sizes": [
+        160
+      ],
+      "horizontal_flip": true,
+      "validation_bce": 0.10299388319253922,
+      "validation_accuracy": 0.9730923694779117
+    },
+    {
+      "candidate": "192_flip",
+      "sizes": [
+        192
+      ],
+      "horizontal_flip": true,
+      "validation_bce": 0.12332911044359207,
+      "validation_accuracy": 0.9734939759036144
+    },
+    {
+      "candidate": "128_160_flip",
+      "sizes": [
+        128,
+        160
+      ],
+      "horizontal_flip": true,
+      "validation_bce": 0.09641915559768677,
+      "validation_accuracy": 0.9734939759036144
+    },
+    {
+      "candidate": "128_160_192_flip",
+      "sizes": [
+        128,
+        160,
+        192
+      ],
+      "horizontal_flip": true,
+      "validation_bce": 0.0968756228685379,
+      "validation_accuracy": 0.9746987951807229
+    }
+  ],
+  "checkpoint_sha256": "d39fc83699ca5cf23a32cc9c39f7f6a31ea23c37d200fc1f28c78cc6c58d79c0"
+}

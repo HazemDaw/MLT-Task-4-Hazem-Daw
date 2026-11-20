@@ -2,51 +2,55 @@
   "model": "scratch",
   "pretrained": false,
   "best_epoch": 51,
-  "validation_loss": 0.10271522402763367,
-  "test_loss": 0.11368803679943085,
-  "accuracy": 0.9632,
-  "balanced_accuracy": 0.9632000000000001,
-  "f1_dog": 0.9633466135458167,
-  "roc_auc": 0.9911670399999999,
-  "correct": 2408,
+  "validation_loss": 0.09641915559768677,
+  "test_loss": 0.1064210906624794,
+  "accuracy": 0.9692,
+  "balanced_accuracy": 0.9692000000000001,
+  "f1_dog": 0.9693104822638502,
+  "roc_auc": 0.99070112,
+  "correct": 2423,
   "test_images": 2500,
-  "ci95_low": 0.9550807813649249,
-  "ci95_high": 0.9698979116114397,
+  "ci95_low": 0.961674486770785,
+  "ci95_high": 0.9752857954928381,
   "tta": true,
+  "inference_sizes": [
+    128,
+    160
+  ],
   "classification_report": {
     "cats": {
-      "precision": 0.9669354838709677,
-      "recall": 0.9592,
-      "f1-score": 0.9630522088353414,
+      "precision": 0.9726027397260274,
+      "recall": 0.9656,
+      "f1-score": 0.9690887193898033,
       "support": 1250.0
     },
     "dogs": {
-      "precision": 0.9595238095238096,
-      "recall": 0.9672,
-      "f1-score": 0.9633466135458167,
+      "precision": 0.965845909451946,
+      "recall": 0.9728,
+      "f1-score": 0.9693104822638502,
       "support": 1250.0
     },
-    "accuracy": 0.9632,
+    "accuracy": 0.9692,
     "macro avg": {
-      "precision": 0.9632296466973886,
-      "recall": 0.9632000000000001,
-      "f1-score": 0.9631994111905791,
+      "precision": 0.9692243245889867,
+      "recall": 0.9692000000000001,
+      "f1-score": 0.9691996008268268,
       "support": 2500.0
     },
     "weighted avg": {
-      "precision": 0.9632296466973886,
-      "recall": 0.9632,
-      "f1-score": 0.9631994111905792,
+      "precision": 0.9692243245889866,
+      "recall": 0.9692,
+      "f1-score": 0.9691996008268269,
       "support": 2500.0
     },
     "confusion_matrix": [
       [
-        1199,
-        51
+        1207,
+        43
       ],
       [
-        41,
-        1209
+        34,
+        1216
       ]
     ]
   }

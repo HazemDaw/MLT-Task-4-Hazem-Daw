@@ -21,12 +21,17 @@
     "scratch": {
       "name": "scratch",
       "best_epoch": 51,
-      "validation_loss": 0.10271522402763367,
-      "validation_accuracy": 0.9698795080184937,
+      "validation_loss": 0.09641915559768677,
+      "validation_accuracy": 0.9734939759036144,
       "checkpoint_sha256": "d39fc83699ca5cf23a32cc9c39f7f6a31ea23c37d200fc1f28c78cc6c58d79c0",
       "tta": true,
       "validation_plain_loss": 0.11219209432601929,
-      "validation_tta_loss": 0.10271522402763367
+      "validation_tta_loss": 0.10271522402763367,
+      "inference_sizes": [
+        128,
+        160
+      ],
+      "inference_candidate": "128_160_flip"
     },
     "vgg16": {
       "name": "vgg16",
