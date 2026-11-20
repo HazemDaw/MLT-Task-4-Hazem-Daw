@@ -38,21 +38,21 @@ ResNet18 is selected for custom-image inference by validation BCE. The residual 
 python -m pip install -r requirements.txt
 ```
 
-Open the notebook in Jupyter or Colab and run the cells in order.
+Open the notebook to read the explanations and saved outputs. Viewing it does not require training or downloading any additional files.
 
-- With `RUN_TRAINING=False` and `RUN_CUSTOM_INFERENCE=False`, tables and plots are reproduced from stored measurements. No accompanying project files, dataset download or checkpoint download are required.
-- Set `RUN_TRAINING=True` to repeat training and evaluation. The notebook downloads the course data and the Part 2 pretrained weights as needed. Files are saved under `task4_runtime/`.
-- Set `RUN_CUSTOM_INFERENCE=True` to predict another image. Set `CUSTOM_IMAGE_PATH` to its path, or leave it as `None` for the included example. The selected checkpoint is downloaded and its SHA-256 is checked.
+**Run All repeats data preparation, training and evaluation**, including the 60-epoch optional experiment. The notebook downloads the course data and Part 2 pretrained weights as needed, then saves generated files under `task4_runtime/`. Run the cells in order and allow time for training.
+
+For custom-image inference, set `CUSTOM_IMAGE_PATH` to another photograph, or leave it as `None` for the example image. Inference uses the checkpoint selected by validation BCE.
 
 The recorded run used Python 3.11, PyTorch 2.11.0, torchvision 0.26.0 and an NVIDIA RTX 3060. Retraining is supported on CPU but is substantially slower. Windows notebook data loaders use zero workers; worker count and hardware differences can change exact results.
 
-On Windows, use the listed `pyzmq>=27` dependency and restart the kernel after installation. An older pyzmq installation on the verification machine loaded an incompatible runtime DLL before PyTorch. The notebook passed all cells with the standard Jupyter kernel after updating pyzmq to 27.3.0.
+On Windows, use the listed `pyzmq>=27` dependency and restart the kernel after installation.
 
 ## Data and validation
 
 The supplied archive contains 20,000 training, 2,490 validation and 2,500 test images. Five duplicate training copies were excluded after a decoded-pixel hash audit, leaving 19,995 training images. Validation and test images were retained. Class mapping is `cats=0`, `dogs=1`.
 
-The submitted notebook was executed independently, and its scores were checked against the saved per-image predictions. Additional checks covered tensor shapes, gradients, frozen BatchNorm statistics, class probabilities and all four training paths on small real-data subsets. These short training checks are separate from the full recorded experiments. Details are in [submission checks](results/submission_checks.json).
+The reported scores were checked against the saved per-image predictions. The complete cell sequence was tested in a temporary copy using small real-data subsets and one epoch per model. The submission retains the full experiment outputs; the short verification results are kept separate. Details are in [submission checks](results/submission_checks.json).
 
 ## Repository files
 
@@ -62,6 +62,6 @@ The submitted notebook was executed independently, and its scores were checked a
 | `requirements.txt` | Python dependencies |
 | `results/` | Configurations, histories, per-image predictions, data audit and validation records |
 
-The `results/` files provide additional evidence; the notebook does not need them in saved-results mode. Trained weights are available in the [checkpoint release](https://github.com/HazemDaw/MLT-Task-4-Hazem-Daw/releases/tag/v1.0).
+The `results/` files document the completed experiments. The notebook is self-contained: it displays saved outputs when opened and generates new results when run. Trained weights are also available in the [checkpoint release](https://github.com/HazemDaw/MLT-Task-4-Hazem-Daw/releases/tag/v1.0).
 
 Sources: supplied Task 4 assignment sheet, lecture 7 and course PyTorch notebook; [course dataset](https://drive.google.com/drive/folders/1KpT0oBIb3aDaBtjf7Hs4WAUPoFEpbsYr), [VGG16](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.vgg16.html), and [ResNet18](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.resnet18.html).

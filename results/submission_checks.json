@@ -1,37 +1,40 @@
 {
   "status": "passed",
   "checks": [
-    "cnn: predictions, accuracy, AUC, confusion matrix, checkpoint and epoch selection agree",
-    "vgg16: predictions, accuracy, AUC, confusion matrix, checkpoint and epoch selection agree",
-    "resnet18: predictions, accuracy, AUC, confusion matrix, checkpoint and epoch selection agree",
-    "scratch: predictions, accuracy, AUC, confusion matrix, checkpoint and epoch selection agree",
-    "Retained training images have no exact pixel duplicates within training or across validation/test",
-    "Required CNN has three convolutions, correct shape, logits and nonzero finite gradients",
-    "Contest model initializes without invoking either pretrained architecture",
-    "Frozen ResNet features and BatchNorm statistics remain unchanged while the head learns",
-    "Evaluation correctly includes a partial final batch",
-    "Notebook inference reproduces the saved custom-dog classification",
-    "cnn: one-epoch notebook training smoke test passed on a small real-data subset",
-    "vgg16: one-epoch notebook training smoke test passed on a small real-data subset",
-    "resnet18: one-epoch notebook training smoke test passed on a small real-data subset",
-    "scratch: one-epoch notebook training smoke test passed on a small real-data subset",
-    "Notebook checkpoint loading, validation selection and final evaluation run end to end"
+    "cnn: full-experiment metrics still match 2,500 per-image predictions",
+    "vgg16: full-experiment metrics still match 2,500 per-image predictions",
+    "resnet18: full-experiment metrics still match 2,500 per-image predictions",
+    "scratch: full-experiment metrics still match 2,500 per-image predictions",
+    "Six genuine full-experiment plots and three embedded photo panels preserved unchanged",
+    "Notebook code is self-contained and proceeds from data preparation through training and inference",
+    "All notebook cells run in sequence in the standard Jupyter kernel on the validation subset"
   ],
-  "smoke_training_epochs": 1,
-  "submitted_scores_unchanged": true,
-  "executed_notebook_cells": 19,
-  "embedded_photo_panels": 3,
-  "generated_figures": 6,
-  "isolated_review": true,
-  "notebook_bytes": 1661835,
-  "standard_ipykernel_execution": true,
-  "training_recheck_scope": "One epoch per model on 16 training, 8 validation and 8 test images; not used as the submitted experiment.",
+  "validation_scope": {
+    "training_images": 16,
+    "validation_images": 8,
+    "test_images": 8,
+    "epochs_per_model": 1,
+    "models": [
+      "cnn",
+      "vgg16",
+      "resnet18",
+      "scratch"
+    ],
+    "execution": "Temporary copy with data path, batch size and epoch count reduced; submitted code unchanged"
+  },
+  "submitted_outputs": "Retained from completed full experiments; not replaced with smoke-test results",
+  "full_training_repeated_after_layout_change": false,
   "recorded_epochs": {
     "cnn": 15,
     "vgg16": 15,
     "resnet18": 15,
     "scratch": 60
   },
-  "notebook_sha256": "98b489f0b9e389af5b2345814a473161a3afc53e1050b92338bd3bb09160c0f4",
-  "verification_pyzmq": "27.3.0"
+  "code_cells": 18,
+  "generated_figures": 6,
+  "embedded_photo_panels": 3,
+  "standard_ipykernel_execution": true,
+  "verification_pyzmq": "27.3.0",
+  "notebook_bytes": 1609227,
+  "notebook_sha256": "c9e5974c5d49ef895bfc5f464056e0893c5b3885ee0fdf2f4cfc225381260bab"
 }
