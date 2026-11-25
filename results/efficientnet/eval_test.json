@@ -1,0 +1,35 @@
+{
+  "selected": "Equal blend with cropped EfficientNet",
+  "challenger": "Equal blend with cropped EfficientNet",
+  "selection_sha256": "88dc4063d8a6dea78177f629298a8b480816bfef6863cbdb534a2d9571881539",
+  "validation": {
+    "name": "Equal blend with cropped EfficientNet",
+    "correct": 2450,
+    "total": 2490,
+    "accuracy": 0.9839357429718876,
+    "bce": 0.06464528111648167,
+    "cats_correct": 1218,
+    "dogs_correct": 1232
+  },
+  "challenger_validation": {
+    "name": "Equal blend with cropped EfficientNet",
+    "correct": 2450,
+    "total": 2490,
+    "accuracy": 0.9839357429718876,
+    "bce": 0.06464528111648167,
+    "cats_correct": 1218,
+    "dogs_correct": 1232
+  },
+  "target_correct": 2473,
+  "correct": 2452,
+  "total": 2500,
+  "accuracy": 0.9808,
+  "bce": 0.07314328217165128,
+  "new_test": true,
+  "reference_recomputed_correct": 2449,
+  "gained_vs_previous": 18,
+  "lost_vs_previous": 15,
+  "predictions_file": "eval_test.csv",
+  "predictions_sha256": "6114b9dcf4c9297d467353421122c8c75ed3a746f728e5a72538f12cc4173a35",
+  "exceeds_0_9888": false
+}

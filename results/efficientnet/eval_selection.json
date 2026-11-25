@@ -1,0 +1,152 @@
+{
+  "selected": "Equal blend with cropped EfficientNet",
+  "challenger": "Equal blend with cropped EfficientNet",
+  "validation": {
+    "name": "Equal blend with cropped EfficientNet",
+    "correct": 2450,
+    "total": 2490,
+    "accuracy": 0.9839357429718876,
+    "bce": 0.06464528111648167,
+    "cats_correct": 1218,
+    "dogs_correct": 1232
+  },
+  "challenger_validation": {
+    "name": "Equal blend with cropped EfficientNet",
+    "correct": 2450,
+    "total": 2490,
+    "accuracy": 0.9839357429718876,
+    "bce": 0.06464528111648167,
+    "cats_correct": 1218,
+    "dogs_correct": 1232
+  },
+  "candidates": [
+    {
+      "name": "Previous course CNN",
+      "correct": 2446,
+      "total": 2490,
+      "accuracy": 0.9823293172690764,
+      "bce": 0.08258857034464397,
+      "cats_correct": 1212,
+      "dogs_correct": 1234
+    },
+    {
+      "name": "224 whole image",
+      "correct": 2439,
+      "total": 2490,
+      "accuracy": 0.9795180722891567,
+      "bce": 0.07397110355328511,
+      "cats_correct": 1210,
+      "dogs_correct": 1229
+    },
+    {
+      "name": "224 with horizontal flip",
+      "correct": 2442,
+      "total": 2490,
+      "accuracy": 0.980722891566265,
+      "bce": 0.06705475198679334,
+      "cats_correct": 1211,
+      "dogs_correct": 1231
+    },
+    {
+      "name": "192/224/256 with flips",
+      "correct": 2442,
+      "total": 2490,
+      "accuracy": 0.980722891566265,
+      "bce": 0.06438155689185822,
+      "cats_correct": 1209,
+      "dogs_correct": 1233
+    },
+    {
+      "name": "224 whole image and corner crops",
+      "correct": 2449,
+      "total": 2490,
+      "accuracy": 0.9835341365461847,
+      "bce": 0.06071718043819492,
+      "cats_correct": 1219,
+      "dogs_correct": 1230
+    },
+    {
+      "name": "Equal blend with multiscale EfficientNet",
+      "correct": 2447,
+      "total": 2490,
+      "accuracy": 0.9827309236947791,
+      "bce": 0.06504520149381873,
+      "cats_correct": 1215,
+      "dogs_correct": 1232
+    },
+    {
+      "name": "Equal blend with cropped EfficientNet",
+      "correct": 2450,
+      "total": 2490,
+      "accuracy": 0.9839357429718876,
+      "bce": 0.06464528111648167,
+      "cats_correct": 1218,
+      "dogs_correct": 1232
+    },
+    {
+      "name": "All views, two-thirds EfficientNet",
+      "correct": 2449,
+      "total": 2490,
+      "accuracy": 0.9835341365461847,
+      "bce": 0.0620894852169696,
+      "cats_correct": 1216,
+      "dogs_correct": 1233
+    },
+    {
+      "name": "All views, two-thirds previous CNN",
+      "correct": 2449,
+      "total": 2490,
+      "accuracy": 0.9835341365461847,
+      "bce": 0.0683991663052561,
+      "cats_correct": 1213,
+      "dogs_correct": 1236
+    }
+  ],
+  "recipes": {
+    "Previous course CNN": {
+      "incumbent": 1.0
+    },
+    "224 whole image": {
+      "plain224": 1.0
+    },
+    "224 with horizontal flip": {
+      "flip224": 1.0
+    },
+    "192/224/256 with flips": {
+      "multiscale": 1.0
+    },
+    "224 whole image and corner crops": {
+      "cropped": 1.0
+    },
+    "Equal blend with multiscale EfficientNet": {
+      "incumbent": 0.5,
+      "multiscale": 0.5
+    },
+    "Equal blend with cropped EfficientNet": {
+      "incumbent": 0.5,
+      "cropped": 0.5
+    },
+    "All views, two-thirds EfficientNet": {
+      "incumbent": 0.3333333333333333,
+      "multiscale": 0.3333333333333333,
+      "cropped": 0.3333333333333333
+    },
+    "All views, two-thirds previous CNN": {
+      "incumbent": 0.6666666666666666,
+      "multiscale": 0.16666666666666666,
+      "cropped": 0.16666666666666666
+    }
+  },
+  "threshold": 0.5,
+  "rule": "Most validation images correct. Lower BCE resolves challenger ties. Incumbent retains equal counts.",
+  "checkpoint_hashes": {
+    "reference": {
+      "course_scratch.pt": "d39fc83699ca5cf23a32cc9c39f7f6a31ea23c37d200fc1f28c78cc6c58d79c0",
+      "best_224.pt": "6d59ee721bc344c93a1902da170654d9eded7f45d7c8da0d8c9a04c83cda876e",
+      "best_288.pt": "ecaad6882833e3bb965d83d5135ac1560b4a89bb1e9af54600c8329d725562b1"
+    },
+    "efficientnet": "eca7ca71afcec12fa495cd778620c6672cbe51537ae3fb2556d2d731e3ef7835",
+    "training_config": "5be29d9bf6800422ab634fcf866bf7dd3fdb4dd1f935eb35c6b313fdb614e49d"
+  },
+  "validation_predictions_sha256": "e031a2d2c4d84c65de0b2b123a8e9a5ae14853124312446cbd92df67426bf841"
+}

@@ -4,9 +4,10 @@
 
 Machine Learning Technologies, ITMO University, 2026
 
-Cats-versus-dogs classification using a three-layer CNN, VGG16 and ResNet18 transfer learning, and a residual CNN trained from scratch.
+**Part 3 contest entry: 2,452/2,500 correct (98.08%) on the course test set.** The entry averages the predictions of EfficientNetV2-S and the earlier residual CNN classifier. Both were trained from random initialization on the course images.
 
-**[Open the notebook](CNN_and_Transfer_Learning_Pytorch.ipynb)** for the complete implementation, explanations, images and saved outputs. All project code is contained in this file.
+- [Assignment notebook](CNN_and_Transfer_Learning_Pytorch.ipynb) — Parts 1 and 2, custom-image inference and the original Part 3 baseline.
+- [Contest notebook](EfficientNetV2_S_Contest.ipynb) — EfficientNetV2-S training, validation comparisons and the final test result. To reproduce the evaluation, [download the notebook with its trained weights](https://github.com/HazemDaw/MLT-Task-4-Hazem-Daw/releases/download/v1.1/EfficientNetV2_S_with_Weights.zip).
 
 ## Assignment coverage
 
@@ -17,7 +18,7 @@ Cats-versus-dogs classification using a three-layer CNN, VGG16 and ResNet18 tran
 | VGG transfer learning and another torchvision model | Part 2: VGG16 and ResNet18 |
 | Test accuracies and learning curves for both transfer models | Part 2 and Final test evaluation |
 | Custom-image test and reusable inference function | Custom-image inference; `predict_image` |
-| Optional classifier without pretrained weights | Part 3: Residual CNN trained from scratch |
+| Optional classifier without pretrained weights | [Contest notebook](EfficientNetV2_S_Contest.ipynb) |
 
 ## Results
 
@@ -29,8 +30,9 @@ All models use the same 2,500-image test split. Checkpoints and inference settin
 | VGG16 transfer | ImageNet | 2,458 | 98.32% | 0.0481 |
 | ResNet18 transfer | ImageNet | 2,464 | 98.56% | 0.0433 |
 | Residual CNN | None | 2,423 | 96.92% | 0.1064 |
+| **Contest entry · EfficientNetV2-S + residual CNN classifier** | **None** | **2,452** | **98.08%** | **0.0731** |
 
-ResNet18 is selected for custom-image inference by validation BCE. The residual CNN is the optional contest entry; its result uses validation-selected logit averaging over 128- and 160-pixel inputs and their horizontal flips. The pretrained models are excluded from the contest. This follow-up inference setting improves the initial scratch-model test accuracy from 96.32% to 96.92% without changing its weights. The initial test records and the validation comparison are retained in `results/scratch/`.
+ResNet18 is selected for custom-image inference by validation BCE. For the contest, EfficientNetV2-S trained for 48 epochs at 160 pixels and 16 epochs at 224 pixels. Its best standalone inference setting used the full image and corner crops and classified 2,449 of 2,490 validation images correctly. An equal average of its logits and the higher-resolution residual CNN classifier's logits scored 2,450/2,490 on validation. This setting improved the previous contest test score from 2,449 to 2,452 correct. [Validation selection](results/efficientnet/eval_selection.json) · [Test predictions](results/efficientnet/eval_test.csv)
 
 ## Running
 
@@ -38,9 +40,11 @@ ResNet18 is selected for custom-image inference by validation BCE. The residual 
 python -m pip install -r requirements.txt
 ```
 
-Open the notebook to read the explanations and saved outputs. Viewing it does not require training or downloading any additional files.
+Both notebooks display saved outputs on GitHub.
 
-**Run All repeats data preparation, training and evaluation**, including the 60-epoch optional experiment. The notebook downloads the course data and Part 2 pretrained weights as needed, then saves generated files under `task4_runtime/`. Run the cells in order and allow time for training.
+In the **assignment notebook**, Run All repeats data preparation, training and evaluation, including the original 60-epoch optional experiment. It downloads the course data and Part 2 pretrained weights as needed, then saves generated files under `task4_runtime/`.
+
+For the **contest notebook**, extract the [v1.1 bundle](https://github.com/HazemDaw/MLT-Task-4-Hazem-Daw/releases/tag/v1.1) and open the notebook inside it. Keep `reference_weights/` and `efficientnet_runtime/` next to the notebook. Run All uses the saved checkpoints to reproduce the comparison. To repeat the 64 training epochs, set `RUN` to a fresh directory. Set `DATA_ROOT` to the extracted course dataset or let the notebook download it.
 
 For custom-image inference, set `CUSTOM_IMAGE_PATH` to another photograph, or leave it as `None` for the example image. Inference uses the checkpoint selected by validation BCE.
 
@@ -58,10 +62,11 @@ The reported scores were checked against the saved per-image predictions. The co
 
 | Item | Contents |
 |---|---|
-| `CNN_and_Transfer_Learning_Pytorch.ipynb` | Complete submission, including embedded images and outputs |
+| `CNN_and_Transfer_Learning_Pytorch.ipynb` | Assignment experiments, custom-image inference and original contest baseline |
+| `EfficientNetV2_S_Contest.ipynb` | Final contest entry, training curves and recorded results |
 | `requirements.txt` | Python dependencies |
 | `results/` | Configurations, histories, per-image predictions, data audit and validation records |
 
-The `results/` files document the completed experiments. The notebook is self-contained: it displays saved outputs when opened and generates new results when run. Trained weights are also available in the [checkpoint release](https://github.com/HazemDaw/MLT-Task-4-Hazem-Daw/releases/tag/v1.0).
+Contest weights are in the [v1.1 release](https://github.com/HazemDaw/MLT-Task-4-Hazem-Daw/releases/tag/v1.1). The [v1.0 release](https://github.com/HazemDaw/MLT-Task-4-Hazem-Daw/releases/tag/v1.0) contains the original assignment checkpoints.
 
 Sources: supplied Task 4 assignment sheet, lecture 7 and course PyTorch notebook; [course dataset](https://drive.google.com/drive/folders/1KpT0oBIb3aDaBtjf7Hs4WAUPoFEpbsYr), [VGG16](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.vgg16.html), and [ResNet18](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.resnet18.html).
