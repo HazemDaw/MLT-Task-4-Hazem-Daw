@@ -1,0 +1,3 @@
+# Preserve the published byte-level checksums for the contest notebook and evidence.
+EfficientNetV2_S_Contest.ipynb -text
+results/efficientnet/* -text
